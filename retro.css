@@ -1,0 +1,17 @@
+#background {
+    background-image: url('/textures/retroSun2.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center top;
+    /* background-size: 90vw 90vh; */
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 0;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
