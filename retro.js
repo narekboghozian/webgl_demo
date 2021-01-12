@@ -72,8 +72,8 @@ function init(){
   directionalLight.position.set( -20, 10, 30 );
   scene.add( directionalLight );
 
-  pointLight = new THREE.PointLight( 0xffffff, 1, 1000 );
-  scene.add(pointLight);
+  pLight = new THREE.PointLight( 0xffffff, 1, 1000 );
+  scene.add(pLight);
 
 }
 
@@ -81,7 +81,7 @@ function makeHill(){
 
 
 
-  var hillGeo = new THREE.PlaneBufferGeometry(worldWidth, worldDepth, hillVertX, hillVertY);
+  var hillGeo = new THREE.PlaneGeometry(worldWidth, worldDepth, hillVertX, hillVertY);
 
   var hillMat	= new THREE.MeshPhongMaterial({
   // wireframe: true,
@@ -165,7 +165,7 @@ function render(){
 
   camera.position.z -= 0.03;
   // camera.rotation.x += 0.1;
-  pointLight.position.set(camera.position.x,camera.position.y,camera.position.z);
+  pLight.position.set(camera.position.x +1,camera.position.y+1,camera.position.z+1);
   // hill.position.x += 0.01;
   // hill.rotation.x += 0.01;
   renderer.render(scene, camera);
